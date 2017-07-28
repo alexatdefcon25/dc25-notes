@@ -1,0 +1,24 @@
+* Hacking Smart Contracts
+  @konstanthacker
+  https://media.defcon.org/DEF%20CON%2025/DEF%20CON%2025%20presentations/DEFCON-25-Konstantinos-Karagiannis-Hacking-Smart-Contracts.pdf
+  - programming ethereum book coming out soon
+  - there are really not that many people programming solidity
+** some tools
+  - solgraph - visualize your solidity contracts
+  - oyente - tool for stepping through smart contract execution
+  - should check out the tools and talk from https://www.defcon.org/html/defcon-25/dc-25-speakers.html#Suiche
+** notes
+   - reentrency bug in the DA contract
+     solidity code is executed sequenctially. account balance was 0'd out after transfer was done. Attacker was able to call the function over and over again, causinga race condition that drained the account before the accounting got done
+   - parity multisig hack
+     only a few people have gotten their money back. lol
+   - unchecked send in King of the Ether
+     chain letter on the blockchain
+     `send` operations can fail
+   - EIP-150 makes it really hard to exhaust all gas in a contract through call-stack issues
+   - `throw` is being deprecated in solidity.
+     - `require` for checking external conditions, used for input validations, etc
+     - `assert`
+   - timestamp in a block can be manipulated. be careful with anything that relies heavily on time
+   - some companies are doing internal private blockchains that then conect with the public blockchain. Public/Private data handoff is one are where we might see issues in the future
+   -
