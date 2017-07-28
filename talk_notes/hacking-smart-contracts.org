@@ -23,4 +23,5 @@
    - some companies are doing internal private blockchains that then conect with the public blockchain. Public/Private data handoff is one are where we might see issues in the future
    - cool stuff coming in Metropolis release
      - swarm
+       https://github.com/ethersphere/swarm
      - crypto primatives
